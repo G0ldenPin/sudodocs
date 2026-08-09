@@ -8,4 +8,4 @@ description = "A minimalist, code-centric Typst template for Computer Science st
 repository = "https://github.com/G0ldenPin/sudo-docs"
 keywords = ["template", "computer-science", "notes", "university"]
 categories = ["report", "education"]
-compiler = "0.15.1" 
+compiler = "0.11.0" 
