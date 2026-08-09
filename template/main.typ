@@ -1,4 +1,4 @@
-#import "lib.typ": project, img, adt-card, algo-card
+#import "@preview/sudo-docs:0.1.0": *
 #show: project.with(
   title: "sudo_docs Template",
   subtitle: "for beautiful computer science notes",
