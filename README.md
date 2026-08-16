@@ -1,13 +1,26 @@
-Markdown
-
 # Introduction
-Welcome to **sudo_docs**, a minimalist, cs-centric Typst template designed for Computer Science students who also happen to like having clean, colorful notes. 
+Welcome to **sudo-docs**, a minimalist, cs-centric Typst template designed for Computer Science students who also happen to like having clean, colorful notes. 
 
 This document demonstrates the visual style and capabilities of the template. The font used for the text is **IBM Plex Mono**, giving it a distinctive "terminal" look, while the code blocks use **Fira Code** (or **Cascadia Code**) for better readability. 
 
 *(Note: If you are compiling locally, ensure these fonts are installed on your system. They are available by default on the Typst web app).*
 
 ## How to use this template
+
+### ✮ Sudo-docs is available on Typst Universe!
+`sudo_docs` is officially available on the [Typst Universe](https://typst.app/universe/package/sudo-docs). You can import the package directly into your project without downloading files manually:
+ 
+ ```typst
+ #import "@preview/sudo_docs:0.1.0": *
+ 
+ #show: project.with(
+   title: "My Project",
+   author: "My Name",
+   // ...
+ )
+```
+*Remember to check the [Universe page](https://typst.app/universe/package/sudo-docs) for the latest version number.*
+
 If you downloaded the file locally, simply import it at the top of your `.typ` file:
 
 ```typst
