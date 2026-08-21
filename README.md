@@ -39,6 +39,20 @@ If you downloaded the file locally, simply import it at the top of your `.typ` f
 
 The template natively supports **multiple languages** (currently English "en" and Italian "it"). By changing the lang parameter in the project setup, Typst will automatically adjust hyphenation rules, translate default elements (such as turning "Table of Contents" into "Indice"), and seamlessly translate all the internal labels of the CS "Identity Cards" (`#adt-card` and `#algo-card`).
 
+### Logo
+
+To use your own logo on the cover page, set:
+
+```typst
+#show: project.with(logo: image("your-logo.png",width: 30%))
+```
+
+You can also set any other type of content as a logo, such as a square!:
+
+```typst
+#show: project.with(logo: square(size: 60pt, radius: 2pt, stroke: 4pt +  rgb("#4d1d14")))
+```
+
 ### Table of Contents & Sections
 
 If you have a large document and want your Table of Contents to stop before a certain section (like an Appendix), simply write the `<new-section>` label anywhere in your file where the main content ends. The TOC will **automatically** stop tracking headings past that point.

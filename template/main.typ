@@ -12,8 +12,9 @@
   // try: rgb("#003366") for Navy Blue, or rgb("#006400") for Green
   main-color: rgb("#4d1d14"), 
   
-  // add your logo path here (e.g., "logo.png") or set to none
-  logo: "logo.png"
+  // add your logo here as content or set to none to not display a logo
+  logo: image("logo.png",width: 30%)
+  //logo: none
 )
 
 // --- CONTENT STARTS HERE ---
