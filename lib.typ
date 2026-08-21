@@ -86,7 +86,7 @@
     #set align(center + horizon)
     
     #if logo != none {
-      if type(logo) == str { image(logo, width: 30%) } else { logo }
+      logo // use content. Logo can now be anything
       v(2em)
     }
 
