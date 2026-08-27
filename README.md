@@ -71,13 +71,13 @@ This is a short tutorial on how to use the img function:
 
 The image **automatically centers** if you don't specify any parameters:
 
-`#img("logo.png", width: 4cm, alt:"alt text here", desc:"centered image")`
+`#img(image("logo.png"), width: 4cm, alt:"alt text here", desc:"centered image")`
 
 You can align an image to the left or right using the pos (position) and width parameters. You can define size and position easily instead of using standard Typst functions.
 
 ```typst
-#img("logo.png", width: 4cm, pos: left) 
-#img("logo.png", width: 4cm, pos: right) 
+#img(image("logo.png"), width: 4cm, pos: left) 
+#img(image("logo.png"), width: 4cm, pos: right) 
 ```
 
 Description for images is *only available for centered images due to space requirements*.
@@ -98,7 +98,7 @@ All parameters except name are optional. You can easily embed visuals using the 
 #adt-card(
   name: "Dictionary (Map / Hash Table)",
   desc: [A collection of *key-value* pairs, where each key is unique.],
-  image: img("logo.png", width: 6cm), // Adds a nice picture inside the card!
+  image: img(image("logo.png"), width: 6cm), // Adds a nice picture inside the card!
   impl: [
     - Hash Tables
     - Balanced Binary Search Trees
@@ -117,7 +117,7 @@ Use this for Algorithms. It automatically creates a 2-column grid for complexity
 ```typst
 #algo-card(
   name: "Merge Sort",
-  image: img("logo.png", width: 4cm), // Adds a nice picture inside the card!
+  image: img(image("logo.png"), width: 4cm), // Adds a nice picture inside the card!
   desc: [A stable sorting algorithm based on the *Divide and Conquer* paradigm.],
   working: [
     1. *Divide:* Split the array in half.

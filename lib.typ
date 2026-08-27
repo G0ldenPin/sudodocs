@@ -2,8 +2,12 @@
 #let template-lang = state("template-lang", "en")
 
 #let img(path, width: 80%, pos: center, desc: none, alt: none, side-text: none, side: left) = {
-  let alt-text = if alt != none { alt } else { desc }
-  let img-content = image(path, width: 100%, alt: alt-text)
+  let img-content = if type(path) == str {
+    let alt-text = if alt != none { alt } else { desc }
+    image(path, width: 100%, alt: alt-text)
+  } else {
+    path
+  }
   
   let img-block = if desc != none {
     figure(img-content, caption: desc, numbering: "1", kind: image)

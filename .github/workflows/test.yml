@@ -1,0 +1,33 @@
+name: Test Template Compilation
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: latest
+
+      - name: Prepare Local Package Cache
+        run: |
+          mkdir -p build-packages/preview/sudo-docs/0.1.0
+          rsync -av --exclude='build-packages' ./ build-packages/preview/sudo-docs/0.1.0/
+
+      - name: Compile Template
+        run: |
+          typst compile template/main.typ --package-path build-packages
+
+      - name: Upload Compiled PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: template-preview-pdf
+          path: template/main.pdf
